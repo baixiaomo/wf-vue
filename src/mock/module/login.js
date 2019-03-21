@@ -1,3 +1,5 @@
+import {Random} from '../random'
+
 export const save = {
   type: 'post',
   url: '/login',
@@ -6,7 +8,8 @@ export const save = {
     'data': {
       'fullName': '@CNAME',
       'userId': 23413451,
-      'username': 'login'
+      'username': 'login',
+      'email': Random.email()
     },
     'msg': 'success'
   }

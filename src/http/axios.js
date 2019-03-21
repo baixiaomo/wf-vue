@@ -15,6 +15,7 @@ export default function $axios (options) {
     // 请求拦截器配置
     instance.interceptors.request.use(
       request => {
+        // 这里可以进行token等权限判断
         return request
       },
       error => {
@@ -24,7 +25,11 @@ export default function $axios (options) {
     // 响应拦截器配置
     instance.interceptors.response.use(
       response => {
-        return response
+        // 这里可以根据返回的状态码进行个性化处理 如200，404,500
+        /* if (response.status === '200') {
+          return response.data
+        } */
+        return response.data
       },
       error => {
         return Promise.reject(error)
@@ -32,7 +37,7 @@ export default function $axios (options) {
     )
     // 处理请求
     instance(options).then(response => {
-      resolve(options)
+      resolve(response)
     }).catch(error => {
       reject(error)
     })
