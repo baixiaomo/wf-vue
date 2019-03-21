@@ -23,7 +23,7 @@ export default {
       this.$store.commit('changeName', 'new Name')
     },
     saveUser () {
-      this.$api.user.save({userName: '魏飞'}).then(response => {
+      this.$api.user.save({userName: 'wfff'}).then(response => {
         console.log('res->', response)
       }).catch(error => {
         console.log(error)
