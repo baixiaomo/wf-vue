@@ -12,7 +12,7 @@ npm install
 npm run dev
 
 # build for production with minification
-npm run build-pro
+npm run build-prod
 
 # build for test with minification
 npm run build-test
