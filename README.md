@@ -1,7 +1,7 @@
 # wf-vue
 
-> A Vue.js project
-
+> 一个初始化vue项目，已集成并配置好常用组件vuex（已配置logger插件）,router,mockjs（开发环境开启）,axios（已封装为异步请求），支持分环境（测试和生产）打包，
+> 可在此基础直接进行二次开发
 ## Build Setup
 
 ``` bash
