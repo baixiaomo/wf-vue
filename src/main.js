@@ -5,12 +5,11 @@ import App from './App'
 import router from './router'
 import store from './store'
 import api from './http'
-import MintUI from 'mint-ui'
-import 'mint-ui/lib/style.css'
-
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 Vue.config.productionTip = false
+Vue.use(ElementUI)
 Vue.use(api)
-Vue.use(MintUI)
 
 // 开发环境是否启用mock
 let openMock = true

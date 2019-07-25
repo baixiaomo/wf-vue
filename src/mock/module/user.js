@@ -1,8 +1,8 @@
 // 查找用户的菜单权限标识集合
 
 const permsData = {
-  'code': 200,
-  'msg': null,
+  'status': 1,
+  'msg': 'success',
   'data': [
     null,
     'sys:user:view',

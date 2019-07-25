@@ -13,15 +13,15 @@ export default (router, userName, to, from) => {
   api.menu.findNavTree({'userName': userName})
     .then(res => {
       // 动态添加路由
-      console.log('routes->', res.data.data)
-      let dynamicRoutes = createDynamicRoutes(res.data.data)
+      console.log('routes->', res.data)
+      let dynamicRoutes = createDynamicRoutes(res.data)
       addDynamicRoutes(router, dynamicRoutes)
       // 记录记载状态和菜单树
       store.commit('setMenuRouteLoaded', true)
-      store.commit('setNavTree', res.data.data)
+      store.commit('setNavTree', res.data)
     }).then(res => {
       api.user.findPermissions({'userName': userName}).then(res => {
-        store.commit('setPermission', res.data.data)
+        store.commit('setPermission', res.data)
       })
     })
 }

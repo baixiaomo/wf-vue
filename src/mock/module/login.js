@@ -1,14 +1,15 @@
 import {Random} from '../random'
 
-export const save = {
+export const login = {
   type: 'post',
   url: '/login',
   data: {
-    'code': 0,
+    'status': 1,
     'data': {
       'fullName': '@CNAME',
       'userId': 23413451,
-      'username': 'login',
+      'username': 'WF',
+      'token': Random.sentence(30),
       'email': Random.email()
     },
     'msg': 'success'
