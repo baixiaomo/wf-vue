@@ -5,10 +5,17 @@ import App from './App'
 import router from './router'
 import store from './store'
 import api from './http'
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
 
 Vue.config.productionTip = false
 Vue.use(api)
-if (process.env.NODE_ENV === 'development') {
+Vue.use(MintUI)
+
+// 开发环境是否启用mock
+let openMock = true
+if (process.env.NODE_ENV === 'development' && openMock) {
+  console.log('开启mock')
   require('./mock')
 }
 
