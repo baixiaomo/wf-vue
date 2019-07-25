@@ -1,4 +1,4 @@
-const user = {
+export default {
   state: {
     permissions: []
   },
@@ -8,5 +8,3 @@ const user = {
     }
   }
 }
-
-export default {user}

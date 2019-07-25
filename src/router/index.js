@@ -17,8 +17,7 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
   // 判断用户是否登录
   let token = Cookies.get('token')
-  // let userName = sessionStorage.getItem('user')
-  DynamicRoutes()
+  let userName = sessionStorage.getItem('user')
   if (to.name === 'login') {
     // 如果是访问登录界面，如果用户会话信息存在，代表已登录过，跳转到主页
     if (token) {
@@ -32,7 +31,7 @@ router.beforeEach((to, from, next) => {
       next({ path: '/login' })
     } else {
       // 加载动态菜单和路由
-      // addDynamicMenuAndRoutes(userName, to, from)
+      DynamicRoutes(router, userName, to, from)
       next()
     }
   }

@@ -29,7 +29,7 @@ const permsData = {
   ]
 }
 export const findPermissions = {
-  url: 'user/findPermissions',
+  url: '/user/findPermissions',
   type: 'get',
   data: permsData
 }
