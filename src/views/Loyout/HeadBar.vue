@@ -19,8 +19,19 @@ export default {
     Hamburger
   },
   methods: {
-    onCollapse () {
-      console.log(11)
+    openWindow (url) {
+      window.open(url)
+    },
+    selectNavBar (key, keyPath) {
+      console.log(key, keyPath)
+    },
+    // 折叠导航栏
+    onCollapse: function () {
+      this.$store.commit('onCollapse')
+    },
+    // 切换主题
+    onThemeChange: function (themeColor) {
+      this.$store.commit('setThemeColor', themeColor)
     }
   },
   computed: {

@@ -67,6 +67,12 @@ export default {
         this.$refs.navmenu.initOpenedMenu()
       }
     }
+  },
+  watch: {
+    $route: 'handleRoute'
+  },
+  created () {
+    this.handleRoute(this.$route)
   }
 }
 </script>
