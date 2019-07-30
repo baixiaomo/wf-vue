@@ -5,16 +5,16 @@
       <div v-for="item in data" :key="item.key" class="message-item">
         <div class="message-avatar">
           <img class="avatar" :src="require('@/assets/user.png')" />
-        </div>  
+        </div>
         <span class="sender">
           {{ item.sender }}
-        </span>  
+        </span>
         <span class="time">
           <li class="fa fa-clock-o"></li> {{ item.time }}
-        </span>  
+        </span>
         <div class="message-cotent">
           {{ item.content }}
-        </div>  
+        </div>
       </div>
     </div>
     <div class="message-footer">查看所有消息</div>
@@ -29,43 +29,43 @@ export default {
       type: Array,
       default: () => [
         {
-          key: "1",
-          avatar:'@/assets/user.png',
-          content:'你修改了用户密码',
-          sender:'诸葛亮',
-          time:'5分钟前'
+          key: '1',
+          avatar: '@/assets/user.png',
+          content: '你修改了用户密码',
+          sender: '诸葛亮',
+          time: '5分钟前'
         },
         {
-          key: "2",
-          avatar:'@/assets/user.png',
-          content:'你修改了用户头像',
-          sender:'武则天',
-          time:'2小时前'
+          key: '2',
+          avatar: '@/assets/user.png',
+          content: '你修改了用户头像',
+          sender: '武则天',
+          time: '2小时前'
         },
         {
-          key: "3",
-          avatar:'@/assets/user.png',
-          content:'今日25名新成员加入',
-          sender:'王语嫣',
-          time:'昨天'
+          key: '3',
+          avatar: '@/assets/user.png',
+          content: '今日25名新成员加入',
+          sender: '王语嫣',
+          time: '昨天'
         },
         {
-          key: "4",
-          avatar:'@/assets/user.png',
-          content:'您发表了一篇新随笔',
-          sender:'苍井空',
-          time:'昨天'
+          key: '4',
+          avatar: '@/assets/user.png',
+          content: '您发表了一篇新随笔',
+          sender: '苍井空',
+          time: '昨天'
         },
         {
-          key: "5",
-          avatar:'@/assets/user.png',
-          content:'您发表了一篇新随笔',
-          sender:'上官婉儿',
-          time:'前天'
+          key: '5',
+          avatar: '@/assets/user.png',
+          content: '您发表了一篇新随笔',
+          sender: '上官婉儿',
+          time: '前天'
         }]
     }
   },
-  data() {
+  data () {
     return {
     }
   },
@@ -75,7 +75,7 @@ export default {
       this.$emit('click', {})
     }
   },
-  mounted() {
+  mounted () {
   }
 }
 </script>

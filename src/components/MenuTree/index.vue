@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { getIFrameUrl, getIFramePath } from '@/utils/iframe'
+import { getIFramePath } from '@/utils/iframe'
 export default {
   name: 'MenuTree',
   props: {

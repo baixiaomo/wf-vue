@@ -57,7 +57,7 @@ function createDynamicRoutes (menuList = [], routes = []) {
           url += array[i].substring(0, 1).toUpperCase() + array[i].substring(1) + '/'
         }
         url = url.substring(0, url.length - 1)
-        route['component'] = resolve => require([`@/views${url}`], resolve)
+        route['component'] = resolve => require([`@/views/${url}`], resolve)
       } catch (e) {}
       // }
       routes.push(route)
@@ -76,5 +76,5 @@ function createDynamicRoutes (menuList = [], routes = []) {
 function addDynamicRoutes (router, dynamicRoutes) {
   router.options.routes[0].children = router.options.routes[0].children.concat(dynamicRoutes)
   router.addRoutes(router.options.routes)
-  console.log(router)
+  console.log('router-》', router)
 }

@@ -5,10 +5,10 @@
       <div v-for="item in data" :key="item.key" class="notice-item">
         <span class="notice-icon">
           <li :class="item.icon"></li>
-        </span>  
+        </span>
         <span class="notice-cotent">
           {{ item.content }}
-        </span>  
+        </span>
       </div>
     </div>
     <div class="notice-footer">查看所有通知</div>
@@ -23,28 +23,28 @@ export default {
       type: Array,
       default: () => [
         {
-          key: "1",
-          icon:'fa fa-envelope-o',
-          content:'你修改了用户密码'
+          key: '1',
+          icon: 'fa fa-envelope-o',
+          content: '你修改了用户密码'
         },
         {
-          key: "2",
-          icon:'fa fa-music',
-          content:'你修改了用户头像'
+          key: '2',
+          icon: 'fa fa-music',
+          content: '你修改了用户头像'
         },
         {
-          key: "3",
-          icon:'fa fa-edit',
-          content:'今日25名新成员加入'
+          key: '3',
+          icon: 'fa fa-edit',
+          content: '今日25名新成员加入'
         },
         {
-          key: "4",
-          icon:'fa fa-edit',
-          content:'您发表了一篇新随笔'
+          key: '4',
+          icon: 'fa fa-edit',
+          content: '您发表了一篇新随笔'
         }]
     }
   },
-  data() {
+  data () {
     return {
     }
   },
@@ -54,7 +54,7 @@ export default {
       this.$emit('click', {})
     }
   },
-  mounted() {
+  mounted () {
   }
 }
 </script>

@@ -5,12 +5,12 @@ export default [
   {
     path: '/',
     name: 'home',
-    component: () => import('../view/home'),
+    component: () => import('../views/Home'),
     children: [] // 此处为动态路由加载节点，别动
   },
   {
     path: '/login',
     name: 'login',
-    component: () => import('../view/Login')
+    component: () => import('../views/Login')
   }
 ]
