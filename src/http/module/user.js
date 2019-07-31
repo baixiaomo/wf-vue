@@ -3,15 +3,30 @@ import axios from '../axios'
 export const save = data => {
   return axios({
     method: 'post',
-    url: '/saveUser',
+    url: '/user/save',
     data
   })
 }
-
+// 删除
+export const batchDelete = (data) => {
+  return axios({
+    url: '/user/delete',
+    method: 'post',
+    data
+  })
+}
+// 分页查询
+export const findPage = (data) => {
+  return axios({
+    url: '/user/findPage',
+    method: 'post',
+    data
+  })
+}
 export const get = data => {
   return axios({
     method: 'get',
-    url: '/getUserById',
+    url: '/user/id',
     data
   })
 }

@@ -17,6 +17,10 @@ export default {
     },
     setNavTree (state, navTree) {
       state.navTree = navTree
+    },
+    setThemeColor (state, themeColor) { // 改变主题颜色
+      state.oldThemeColor = state.themeColor
+      state.themeColor = themeColor
     }
   },
   actions: {}

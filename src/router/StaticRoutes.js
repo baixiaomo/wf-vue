@@ -9,6 +9,10 @@ export default [
     children: [] // 此处为动态路由加载节点，别动
   },
   {
+    path: '/home',
+    redirect: '/'
+  },
+  {
     path: '/login',
     name: 'login',
     component: () => import('../views/Login')

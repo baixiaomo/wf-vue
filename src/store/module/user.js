@@ -1,5 +1,10 @@
 export default {
   state: {
+    user: {
+      name: 'default', // 名称
+      account: '', // 账号
+      avatar: '' // 头像
+    },
     permissions: []
   },
   mutations: {
