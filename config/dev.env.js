@@ -5,5 +5,5 @@
 module.exports = {
   NODE_ENV: '"development"',
   EVN_CONFIG: '"dev"',
-  BASE_URL: '"https://localhost:8080"'
+  BASE_URL: '"http://localhost:8080"'
 }
