@@ -3,7 +3,8 @@ import * as user from './module/user'
 import * as login from './module/login'
 import * as menu from './module/menu'
 import * as role from './module/role'
-const modules = [user, login, menu, role]
+import * as dept from './module/dept'
+const modules = [user, login, menu, role, dept]
 
 Mock.setup({
   timeout: '200-600'
