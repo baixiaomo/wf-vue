@@ -15,3 +15,14 @@ export const login = {
     'msg': 'success'
   }
 }
+// 登出接口
+export const logout = {
+  url: '/logout',
+  type: 'get',
+  data: {
+    'code': 200,
+    'msg': null,
+    'data': {
+    }
+  }
+}

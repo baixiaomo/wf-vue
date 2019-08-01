@@ -58,6 +58,7 @@
 </template>
 
 <script>
+import Cookies from 'js-cookie'
 export default {
   name: 'PersonalPanel',
   props: {
@@ -83,6 +84,7 @@ export default {
       })
         .then(() => {
           sessionStorage.removeItem('user')
+          Cookies.remove('token')
           this.$store.commit('updateMainTabs', [])
           this.$router.push('/login')
           this.$api.login.logout().then((res) => {

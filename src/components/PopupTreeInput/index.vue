@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-popover ref="popover" :placement="placement" trigger="click">
+    <el-popover ref="popover" :placement="placement" trigger="click" :width="width">
       <el-tree
         :data="data"
         :props="props"
@@ -43,6 +43,10 @@ export default {
     placement: {
       type: String,
       default: 'right-start'
+    },
+    width: {
+      type: Number,
+      default: 300
     },
     defaultExpandAll: {
       type: Boolean,

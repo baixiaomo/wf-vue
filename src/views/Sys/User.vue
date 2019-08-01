@@ -38,11 +38,11 @@
                                   @handleFilterColumns="handleFilterColumns">
       </table-column-filter-dialog>
     </div>
-    <kt-table :height="350" permsEdit="sys:user:edit" permsDelete="sys:user:delete"
+    <kt-table :height="450" permsEdit="sys:user:edit" permsDelete="sys:user:delete"
               :data="pageResult" :columns="filterColumns"
               @findPage="findPage" @handleEdit="handleEdit" @handleDelete="handleDelete">
     </kt-table>
-   <el-dialog :title="operation?'新增':'编辑'" width="40%" :visible.sync="dialogVisible" :close-on-click-modal="false">
+   <el-dialog :title="operation?'新增':'编辑'" width="30%" :visible.sync="dialogVisible" :close-on-click-modal="false">
      <el-form :model="dataForm" label-width="80px" :rules="dataFormRules" ref="dataForm" :size="size"
               label-position="right">
        <el-form-item label="ID" prop="id" v-if="false">
@@ -60,6 +60,7 @@
            :props="deptTreeProps"
            :prop="dataForm.deptName"
            :nodeKey="''+dataForm.deptId"
+           placement="bottom-start"
            :currentChangeHandle="deptTreeCurrentChangeHandle">
          </popup-tree-input>
        </el-form-item>
@@ -69,8 +70,8 @@
        <el-form-item label="手机" prop="mobile">
          <el-input v-model="dataForm.mobile" auto-complete="off"></el-input>
        </el-form-item>
-       <el-form-item label="角色" prop="userRoles" v-if="!operation">
-         <el-select v-model="dataForm.userRoles" multiple placeholder="请选择"
+       <el-form-item label="角色" prop="userRoles">
+         <el-select v-model="dataForm.userRoles"  multiple placeholder="请选择"
                     style="width: 100%;">
            <el-option v-for="item in roles" :key="item.id"
                       :label="item.remark" :value="item.id">
@@ -262,7 +263,7 @@ export default {
     }
   },
   mounted () {
-    // this.findDeptTree()
+    this.findDeptTree()
     this.initColumns()
   }
 }

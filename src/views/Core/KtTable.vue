@@ -5,16 +5,16 @@
           @current-change="handleCurrentChange" v-loading="loading" element-loading-text="加载中" :border="border" :stripe="stripe"
           :show-overflow-tooltip="showOverflowTooltip" :max-height="maxHeight" :height="height" :size="size" :align="align" style="width:100%;" >
       <el-table-column type="selection" width="40" v-if="showBatchDelete & showOperation"></el-table-column>
-      <el-table-column v-for="column in columns" header-align="center" align="center"
-        :prop="column.prop" :label="column.label" :width="column.width" :min-width="column.minWidth"
-        :fixed="column.fixed" :key="column.prop" :type="column.type" :formatter="column.formatter"
-        :sortable="column.sortable==null?true:column.sortable">
-      </el-table-column>
-      <el-table-column label="操作" width="185" fixed="right" v-if="showOperation" header-align="center" align="center">
+      <el-table-column label="操作" width="185"  v-if="showOperation" header-align="center" align="center">
         <template slot-scope="scope">
           <kt-button icon="fa fa-edit" label="编辑" :perms="permsEdit" :size="size" @click="handleEdit(scope.$index, scope.row)" />
           <kt-button icon="fa fa-trash" label="删除" :perms="permsDelete" :size="size" type="danger" @click="handleDelete(scope.$index, scope.row)" />
         </template>
+      </el-table-column>
+      <el-table-column v-for="column in columns" header-align="center" align="center"
+        :prop="column.prop" :label="column.label" :width="column.width" :min-width="column.minWidth"
+        :fixed="column.fixed" :key="column.prop" :type="column.type" :formatter="column.formatter"
+        :sortable="column.sortable==null?true:column.sortable">
       </el-table-column>
     </el-table>
     <!--分页栏-->
@@ -54,7 +54,7 @@ export default {
     },
     height: { // 表格最大高度
       type: Number,
-      default: 250
+      default: 500
     },
     showOperation: { // 是否显示操作组件
       type: Boolean,

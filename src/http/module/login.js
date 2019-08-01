@@ -11,10 +11,10 @@ export const login = data => {
   })
 }
 
-export const logout = data => {
+// 登出
+export const logout = () => {
   return axios({
-    method: 'post',
     url: '/logout',
-    data
+    method: 'get'
   })
 }

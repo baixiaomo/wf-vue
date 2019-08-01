@@ -46,9 +46,15 @@ for (let i = 0; i < content.length; i++) {
     obj.parentId = parent.id
     obj.parentName = parent.name
     obj.name = '机构部门  ' + (i + 1) + '-' + (j + 1)
+    obj.children = []
     parent.children.push(obj)
   }
 }
+let obj4 = {id: 4, parentId: 0, name: '机构部门4', parentName: '顶级部门', children: []}
+let obj33 = {id: 36, parentId: 0, name: '机构部门36', parentName: '三级部门', children: []}
+content.push(obj4)
+let con3 = content[2].children[3]
+con3.children.push(obj33)
 findTreeData.data = content
 export const findDeptTree = {
   url: '/dept/findTree',

@@ -4,7 +4,7 @@
 export default [
   {
     path: '/',
-    name: 'home',
+    name: '主页',
     component: () => import('../views/Home'),
     children: [] // 此处为动态路由加载节点，别动
   },

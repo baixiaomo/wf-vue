@@ -94,6 +94,8 @@ function getContent (pageNum, pageSize) {
     obj.createTime = '2018-08-14 11:11:11'
     obj.createBy = 'admin'
     obj.createTime = '2018-09-14 12:12:12'
+    obj.userRoles = [1, 2, 3]
+    obj.roleNames = '超级管理员'
     content.push(obj)
   }
   return content
