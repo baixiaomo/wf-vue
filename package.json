@@ -16,7 +16,7 @@
     "build-prod": "cross-env NODE_ENV=production env_config=prod node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "element-ui": "^2.10.1",
     "font-awesome": "^4.7.0",
     "js-cookie": "^2.2.0",
